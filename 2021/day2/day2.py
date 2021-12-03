@@ -15,7 +15,7 @@ for command in _input:
         y = y + value
     print(f"x: {x} y: {y}")
 
-print(f"day1: {x*y}")
+print(f"part1: {x*y}")
 
 
 # Part 2 
@@ -34,4 +34,4 @@ for command in _input:
         aim = aim + value
     print(f"x: {x} y: {y} aim: {aim}")
 
-print(f"day2: {x*y}")
+print(f"part2: {x*y}")
