@@ -9,16 +9,13 @@ instructions = [
     for x, y, do, dont in re.findall(pattern, input_string)
 ]
 
-print(instructions)
-
 enabled = True
 total = 0
 for instruction in instructions:
-    if instruction == "do()":
-        enabled = True
-    elif instruction == "don't()":
-        enabled = False
-    elif enabled:
-        total += instruction[0] * instruction[1]
+    if isinstance(instruction, tuple):
+        if enabled:
+            total += instruction[0] * instruction[1]
+    else:
+        enabled = instruction == "do()"
 
 print(total)
